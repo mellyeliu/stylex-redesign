@@ -86,17 +86,24 @@ export function LiveCodeLogo({ themeMode }: LiveCodeLogoProps) {
         <div
           className={`p-12 rounded-t-xl border ${
             isDark ? "border-slate-800" : "border-slate-200"
-          } border-b-0 transition-colors duration-300`}
+          } border-b-0 transition-colors duration-300 relative overflow-hidden`}
         >
-          <div className="text-center">
+          {/* Center radial gradient overlay */}
+          <div 
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background: 'radial-gradient(circle at center, rgba(255, 255, 255, 0.8) 0%, transparent 70%)',
+            }}
+          />
+          <div className="text-center relative z-10">
             <div className="inline-block mb-8">
               <img src={stylexLogo} alt="StyleX Logo" className="h-20" />
             </div>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button className="px-8 py-3 bg-[#E879F9] text-white rounded-lg hover:opacity-90 transition-opacity">
+              <button className="px-8 py-3 bg-[#E879F9] text-white rounded-lg hover:opacity-90 transition-opacity border border-[#2a2a2a]">
                 Get Started
               </button>
-              <button className="px-8 py-3 bg-[#6366F1] text-white rounded-lg hover:opacity-90 transition-colors">
+              <button className="px-8 py-3 bg-[#6366F1] text-white rounded-lg hover:opacity-90 transition-colors border border-[#2a2a2a]">
                 Thinking in StyleX
               </button>
             </div>
@@ -124,7 +131,7 @@ export function LiveCodeLogo({ themeMode }: LiveCodeLogoProps) {
                 <div className="w-3 h-3 rounded-full bg-green-400" />
               </div>
               <span
-                className={`text-sm ${
+                className={`text-sm font-semibold ${
                   isDark ? "text-slate-400" : "text-slate-600"
                 }`}
               >

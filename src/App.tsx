@@ -27,7 +27,7 @@ export type FontFamily =
   | "xanh-mono";
 
 export default function App() {
-  const [themeMode, setThemeMode] = useState<ThemeMode>("light");
+  const [themeMode, setThemeMode] = useState<ThemeMode>("dark");
   const [accentFont, setAccentFont] = useState<FontFamily>("share-tech");
 
   const isDark = themeMode === "dark";

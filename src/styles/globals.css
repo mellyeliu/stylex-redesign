@@ -1,11 +1,33 @@
+@import 'tailwindcss';
+
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=B612+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap');
+
+@theme {
+  /* Typography */
+  --font-sans: 'Share Tech Mono', monospace;
+  --font-supreme: 'Supreme', ui-sans-serif, system-ui, sans-serif;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 :root {
   --font-size: 16px;
-  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-heading: "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --background: #ffffff;
   --foreground: oklch(0.145 0 0);
   --card: #ffffff;
@@ -26,6 +48,8 @@
   --input: transparent;
   --input-background: #f3f3f5;
   --switch-background: #cbced4;
+  --font-weight-bold: 700;
+  --font-weight-semibold: 600;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
   --ring: oklch(0.708 0 0);
@@ -43,44 +67,45 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --block-border: 1px solid rgb(226, 232, 240);
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.145 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.145 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.985 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
+  --background: oklch(0.157 0 0);
+  --foreground: oklch(0.977 0 0);
+  --card: oklch(0.157 0 0);
+  --card-foreground: oklch(0.977 0 0);
+  --popover: oklch(0.157 0 0);
+  --popover-foreground: oklch(0.977 0 0);
+  --primary: oklch(0.977 0 0);
+  --primary-foreground: oklch(0.235 0 0);
+  --secondary: oklch(0.235 0 0);
+  --secondary-foreground: oklch(0.977 0 0);
+  --muted: oklch(0.235 0 0);
   --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.269 0 0);
-  --input: oklch(0.269 0 0);
-  --ring: oklch(0.439 0 0);
+  --accent: oklch(0.235 0 0);
+  --accent-foreground: oklch(0.977 0 0);
+  --destructive: oklch(0.465 0.202 25.787);
+  --destructive-foreground: oklch(0.977 0 0);
+  --border: oklch(0.235 0 0);
+  --input: oklch(0.235 0 0);
+  --ring: oklch(0.774 0 0);
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(0.269 0 0);
-  --sidebar-ring: oklch(0.439 0 0);
-  --spacing: 0.5rem;
+  --chart-1: oklch(0.696 0.154 35.239);
+  --chart-2: oklch(0.596 0.195 155.532);
+  --chart-3: oklch(0.455 0.117 252.413);
+  --chart-4: oklch(0.696 0.154 75.239);
+  --chart-5: oklch(0.596 0.195 5.532);
+  --sidebar-background: oklch(0.157 0 0);
+  --sidebar-foreground: oklch(0.708 0 0);
+  --sidebar-primary: oklch(0.977 0 0);
+  --sidebar-primary-foreground: oklch(0.235 0 0);
+  --sidebar-accent: oklch(0.235 0 0);
+  --sidebar-accent-foreground: oklch(0.977 0 0);
+  --sidebar-border: oklch(0.235 0 0);
+  --sidebar-ring: oklch(0.774 0 0);
+  --block-border: 1px solid rgb(64, 64, 64);
 }
 
 @theme inline {
@@ -131,16 +156,20 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: var(--font-sans);
+    position: relative;
   }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: var(--font-heading);
+  
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
   }
 }
 
@@ -148,29 +177,33 @@
  * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
  */
 @layer base {
-  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+  :where(:not(:has([class*=' text-']), :not(:has([class^='text-'])))) {
     h1 {
       font-size: var(--text-2xl);
       font-weight: var(--font-weight-medium);
       line-height: 1.5;
+      font-family: var(--heading-font);
     }
 
     h2 {
       font-size: var(--text-xl);
       font-weight: var(--font-weight-medium);
       line-height: 1.5;
+      font-family: var(--heading-font);
     }
 
     h3 {
       font-size: var(--text-lg);
       font-weight: var(--font-weight-medium);
       line-height: 1.5;
+      font-family: var(--heading-font);
     }
 
     h4 {
       font-size: var(--text-base);
       font-weight: var(--font-weight-medium);
       line-height: 1.5;
+      font-family: var(--heading-font);
     }
 
     p {
@@ -183,12 +216,14 @@
       font-size: var(--text-base);
       font-weight: var(--font-weight-medium);
       line-height: 1.5;
+      font-family: var(--heading-font);
     }
 
     button {
       font-size: var(--text-base);
       font-weight: var(--font-weight-medium);
       line-height: 1.5;
+      font-family: var(--heading-font);
     }
 
     input {
@@ -200,5 +235,61 @@
 }
 
 html {
-  font-size: var(--font-size);
+  font-size: calc(var(--font-size) * 0.9);
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes radial-expand {
+  0%, 100% {
+    background-size: 100% 100%;
+    background-position: center;
+  }
+  50% {
+    background-size: 150% 150%;
+    background-position: center;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+.animate-scroll {
+  animation: scroll 25s linear infinite;
+}
+
+/* Dynamic font weights based on CSS variables */
+.font-bold,
+strong,
+b {
+  font-weight: var(--font-weight-bold) !important;
+  font-family: var(--heading-font);
+}
+
+.font-semibold {
+  font-weight: var(--font-weight-semibold) !important;
+  font-family: var(--heading-font);
+}
+
+.font-medium {
+  font-weight: var(--font-weight-medium) !important;
+  font-family: var(--heading-font);
 }

@@ -1,7 +1,7 @@
 
-  # Styling System Documentation
+  # StyleX Website (Copy)
 
-  This is a code bundle for Styling System Documentation. The original project is available at https://www.figma.com/design/6AYVX8SHPRULsjb1PdClwm/Styling-System-Documentation.
+  This is a code bundle for StyleX Website (Copy). The original project is available at https://www.figma.com/design/1ltcZcvSeZn7ZPxD2PbazM/StyleX-Website--Copy-.
 
   ## Running the code
 
